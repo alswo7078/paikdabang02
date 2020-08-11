@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방</title>
+
+    <link rel="shortcut icon" href="./image/pabicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./css/header02.css">
+    <link rel="stylesheet" href="./css/./style.css">
+  <!-- 구글폰트(로보토,노토산스KR) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script>
+      $(document).ready(function(){
+        $('.slider').bxSlider({
+            auto:true,
+            speed:1500,
+            mode:'fade',
+            pause:2000,
+            responsive:true,
+            
+        });
+      });
+      $(document).ready(function(){
+      
+      $('.slider').bxSlider();
+
+      $('#nav_btn').click(function(){
+        $('header>.content').toggleClass('active');
+        $('.slider_menu').toggleClass('active');
+        $('#nav_btn').toggleClass('active');
+      });
+
+      $('.main_nav>li>a').click(function(){
+        $('.sub_nav').slideToggle();
+        $('.main_nav>li>a').toggleClass('active');
+      });
+    });
+    </script>
+  
+<style>
+
+
+/* .btn_nav>li:nth-child(1){
+    border: 2px solid black;
+    width: 25px;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+.btn_nav>li:nth-child(2){
+    border: 2px solid black;
+    width: 25px;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+.btn_nav>li:nth-child(3){
+    border: 2px solid black;
+    width: 25px;
+    border-radius: 30px;
+} */
+
+.sub_nav{display:none;}
+    .content{padding:0 20px;}
+    .header>.content{
+      height:100px;
+      border-bottom:1px solid black;
+      position:relative;
+    }
+
+    .main_logo{padding-top:30px;}
+    .main_logo p:first-child{
+      padding-left:8px;
+      font-weight:bold;
+      font-size:24px;
+      color:#333333;
+      position:relative;
+    }
+
+
+    .main_logo p:last-child{
+      font-size:14px;
+      color:#333333;
+      padding-left:30px;
+    }
+
+    .slider_menu{
+       max-width: 300px;
+        width: 300px;
+        height: 100%;
+        display: block;
+      width:0;      
+      background-color:#0e347e;
+      opacity: 0.7;
+      overflow: hidden;
+      position:absolute;
+      right:0;
+      z-index:20;
+      transition:0.6s;
+    }
+    .slider_menu.active{
+      right: 0;
+      height: 600px;
+      padding:20px;
+      width:100%;
+      margin-top: 15px;
+    }
+    .lang{display:flex;margin-bottom:30px;position: relative;}
+    .lang>li{width:80px;font-size:20px;cursor: pointer;color: white;}
+    .lang>li:first-child{font-weight:bold;}
+
+    .main_nav{position: absolute;}
+    .main_nav>li{
+    
+      padding:20px 0;
+      display: block;
+    }
+    .main_nav li p{
+      display:block;
+      font-weight:bold;
+      font-size:36px;
+      color:white; 
+    }
+    .btn_nav{
+      width:28px;
+      height:25px;
+      right:36px;
+      top:-25%;
+      left: 95%;
+      position: relative;
+      transform:translateY(-50%);
+      display:flex;
+      flex-flow:column nowrap;
+      justify-content:space-between;
+    }
+    .btn_nav>li{
+      width:100%;
+      height:4px;
+      background-color:black;
+      transform-origin:left center;
+      transition:0.3s;
+    }
+    .btn_nav>li:nth-child(2){
+      transform-origin:center;
+    }
+    .btn_nav.active>li:nth-child(1){
+      transform:rotate(48deg) scaleX(1);
+    }
+    .btn_nav.active>li:nth-child(2){
+      transform:scaleX(0);
+    }
+    .btn_nav.active>li:nth-child(3){
+      transform:rotate(-48deg) scaleX(1);
+    }
+.main_nav>p{margin: 0 auto;}
+.nav_text01,.nav_text02,.nav_text03,.nav_text04,.nav_text05{
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    right: 0px;
+    left: 0;
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header_left">
+                <a href="index.html">
+                    <img src="./image/logo_32.png" alt="메인로고">
+                    <h1>빽다방</h1>
+                </a>
+            </div>
+            <div class="header_right">
+                <!-- <a href="#">
+                    <img src="./image/3_06.png" alt="햄버거메뉴">
+                </a> -->
+            </div>
+            <div class="slider_menu">
+                <ul class="lang">
+                  <li>KOR</li>
+                  <li>ENG</li>
+                </ul>
+                <ul class="main_nav">
+                  <li>
+                   <p class="nav_text01">ㅎㅇ..</p>
+                   <p class="nav_text02">만들기</p>
+                   <p class="nav_text03">힘들다</p>
+                   <p class="nav_text04">10R</p>
+                   <p class="nav_text05">롬곡</p>
+                </ul>
+                <ul class="sns">
+                  <li><a href="#">고객문의</a></li>
+                  <li><a href="#" class="circle"><span>인스타그램</span></a></li>
+                  <li><a href="#" class="circle"><span>페이스북</span></a></li>
+                </ul>
+              </div>
+              <ul class="btn_nav" id="nav_btn">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+        </div>
+        <div class="main_banner">
+            <div class="slider">
+            <a href="#">
+            <img src="./image/main_01.jpg" alt="메인01"></a>
+            <a href="#">
+            <img src="./image/main_02.jpg" alt="메인02"></a>
+            <a href="#">
+            <img src="./image/main_03.jpg" alt="메인03"></a>
+            <a href="#">
+            <img src="./image/main_04.jpg" alt="메인04"></a>
+            <a href="#">
+            <img src="./image/main_05.jpg" alt="메인05"></a>
+            <a href="#">
+            <img src="./image/main_06.jpg" alt="메인06"></a>
+            </div>
+        </div>
+        <div class="coffee_story">
+            <div class="sec01_img">
+            <a href="#">
+            <img src="./image/paiks_06.png" alt="sec1">
+            </a>
+            </div>
+                <div class="sec01_text">
+                <p>The Finest Quality Coffee Plants</p>
+                <p>PAIK’S COFFEE STORY</p>
+                <p>균형잡힌 바디감으로 긴여운을 남기는 빽다방 커피를 만나보세요.</p>
+                </div>
+        </div>
+        <div class="fresh_coffee">
+            <div class="fresh_txt img_txt">
+                <p>FRESH <br>
+                   COFFEE
+                </p>
+            </div>
+            <div class="fresh_img"><img src="./image/coffee_story.png" alt="fresh"></div>
+        </div>
+        <div class="various">
+            <div class="various_txt img_txt">
+                <p>VARIOUS <br>
+                    BEVERAGE</p>
+            </div>
+            <div class="various_img">
+                <img src="./image/various.png" alt="various">
+            </div>
+        </div>
+        <div class="sweet">
+            <div class="sweet_txt img_txt">
+                <p>
+                    SWEET  <br>
+                    PAIK'S CCINO
+                </p>
+            </div>
+            <div class="sweet_img">
+                <img src="./image/sweet.png" alt="sweet">
+            </div>
+        </div>
+        <div class="tasty">
+            <div class="tasty_txt img_txt">
+                <p>
+                    TASTY <br>
+                    ICE CREAM / <br>
+                    DESSERT
+                </p>
+            </div>
+                <div class="tasty_img">
+                    <img src="./image/tasty.png" alt="tasty">
+                </div>
+        </div>
+        <div class="franchise_store">
+            <div class="fran">
+                <div class="fran_title">
+                    <p>FRANCHISE</p>
+                </div>
+                <div class="fran_txt">
+                    <p>빽다방 창업안내를 도와드리겠습니다.</p>
+                </div>
+                <div class="fran_img">
+                    <img src="./image/FRAINCHISE.png" alt="fran_logo">
+                </div>
+            </div>
+            <div class="store">
+                <div class="store_title">
+                    <p>
+                        STORE
+                    </p>
+                </div>
+                <div class="store_txt">
+                    <p>
+                        원하시는 지역의 매장을 검색해 보세요!
+                    </p>
+                </div>
+                <div>
+                    <div class="search_box">
+                    <input type="text" placeholder="Find a store in Your area!" style="width: 250px; height: 30px; border: 2px solid #0e347e; padding: 0 10px;" class="store_search">
+
+                </div>
+                    <div class="search">
+                        <div class="store_box_line">
+                            <div class="store_box_icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paiks_coffee_sns">
+            <h2>PAIK’S COFFEE SNS</h2>
+            <ul>
+                <li>#빽다방</li>
+                <li>#빽다방신메뉴</li>
+                <li>#빽다방이벤트</li>
+            </ul>
+            <div class="sns_icon">
+            <div class="sns_icon01">
+                <a href="#">
+                <img src="./image/facebook.png" alt="sns01">
+                </a>
+            </div>   
+            <div class="sns_icon02">
+                <a href="#">
+                <img src="./image/insta.png" alt="sns02">
+                </a>
+            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="theborn">
+                <a href="#">
+                <img src="./image/footer_logo.png" alt="theborn">
+                </a>
+            </div>
+            <div class="footer_txt">
+                <p>
+                    (주)더본코리아 <br>
+                    사업자등록번호 211-86-00870 <br>
+                    대표이사 백종원 <br>
+                    주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층 <br>
+                    팩스: 02-511-3864 <br>
+                    본사 대표전화: 02-549-3864 <br>
+                    가맹상담전화: 02-3447-0410 <br>
+                    고객센터: 1544-2360 
+                </p>
+                <span>COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
