@@ -17,6 +17,7 @@
 .sns>ul{position:absolute;top:50%;right:0;transform:translateY(-50%);}
 .sns li{float:left;margin-left:0px;}
 .sns li a{
+    margin-left: -14px;
     left: 0px;
     top: -20px;
     display:inline-block;font-size:20px;font-weight: bold;color:white;position: relative;}
